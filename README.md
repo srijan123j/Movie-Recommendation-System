@@ -1,6 +1,6 @@
 In the world of internet, we have a countless number choices for the things like the books we should read, the courses we should do, the music we should listen, the movies we should watch, etc. It is practically impossible to go through almost all the available choices to get the things of our liking. 
 Now we are in the need of the system which by processing very large sets of data can make effective recommendations for us. 
-Keeping that in mind, I have made a <b>MOVIE RECOMMENDATION SYSTEM</b> which uses <b>Hadoop architecture</b> and <b>Apache Hive</b> to make recommendations to its users.
+Keeping that in mind, I have made a description based <b>MOVIE RECOMMENDATION SYSTEM</b> which uses <b>Hadoop architecture</b> and <b>Apache Hive</b> to make recommendations to its users.
 This project is based on the applications of Hadoop and Apache Hive.
 
 Talking about the users' interface of the system it has three drop-down lists by which users can select <b>rating, genres and tags</b> of their choice. Ratings are made on a 5-star scale, with half-star increments (0.5-5.0). Users can select more than one genres and tags of their choice. Users can even leave any of the Ratings, genres and tags fields empty but not all. Based on the choices made by the users the recommender suggests movies to them by processing large data-set in the background. 
