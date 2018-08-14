@@ -1,4 +1,4 @@
-In the world of internet, we have a countless number choices for the things like the books we should read, the courses we should do, the music we should listen, the movies we should watch. It is practically impossible to go through almost all the available choices to get the things of our liking. 
+In the world of internet, we have a countless number choices for the things like the books we should read, the courses we should do, the music we should listen, the movies we should watch,etc. It is practically impossible to go through almost all the available choices to get the things of our liking. 
 Now we are in the need of the system which by processing very large sets of data can make effective recommendations for us. 
 Keeping that in mind, I have made a <b>MOVIE RECOMMENDATION SYSTEM</b> which uses <b>Hadoop architecture</b> and <b>Apache Hive</b> to make recommendations to its users.
 This project is based on the applications of Hadoop and Apache Hive.
