@@ -1,0 +1,7 @@
+// to move the data set into HDFS //
+hadoop fs - put file_name folder_name
+
+// to run MapReduce code //
+hadoop jar /path to the jar/ -mapper mapper.py -reducer reducer.py 
+-file mapper.py -file reducer.py
+-input input_directory_name -output output_directory_name
