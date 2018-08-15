@@ -31,3 +31,28 @@ create table table_name(
 // to load data in a table //
 load data inpath /path_to_data/ into table table_name;
 
+// to join tables and insert the result into a new table //
+insert into table_name
+select l.movie_id, l.imdb_id, l.tmdb_id, m.title, m.genre, r.rating, t.tag from links l
+join movies m on (l.movie_id=m.movie_id)
+join ratings r on (l.movie_id=r.movie_id)
+join tags t on (l.movie_id=t.movie_id);
+
+// cubing of a table and insert the result into a new table //
+insert into table_name
+select rating, genre, tag from joined_table
+group by rating, genre, tag
+grouping sets ((rating, genre, tag),(rating, genre),(genre, tag),(tag, rating),(rating),(genre),(tag));
+
+// final recommendation table //
+insert into final_table
+select j.movie_id, j.imdb_id, j.tmdb_id, j.title, c.rating, c.genre, c.tag
+from joined_table j, cubed table c
+where (c.rating is NULL OR c.rating=j.rating) AND (c.genre is NULL OR c.genre=j.genre) AND (c.tag is NULL OR c.tag=j.tag);
+
+// to make recommendations //
+select imdb_id, tmdb_id, title from final_table 
+where rating >= /user_preference/ AND genre = /user_preferences/ AND tag = /user_preferences/
+order by count (title) desc
+group by title
+limit 10;
