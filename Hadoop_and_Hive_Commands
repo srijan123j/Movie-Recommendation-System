@@ -6,28 +6,28 @@ hadoop jar /path to the jar/ -mapper mapper.py -reducer reducer.py
 -file mapper.py -file reducer.py
 -input input_directory_name -output output_directory_name
 
-// to start hive
+// to start hive //
 sudo hive
 
-// create database
+// create database //
 create database database_name;
 
-// to see available databases
+// to see available databases //
 show databases;
 
-// to see database properties
+// to see database properties //
 describle database extended database_name;
 
-// to use a particular database
+// to use a particular database //
 use database_name;
 
-// to create a table
+// to create a table //
 create table table_name(
 > cell_no int,
 > city string,
 > name string)
 > row format delimited fields terminited by ',';
 
-// to load data in a table
+// to load data in a table //
 load data inpath /path_to_data/ into table table_name;
 
