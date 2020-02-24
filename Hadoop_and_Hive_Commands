@@ -57,5 +57,6 @@ order by count (title) desc
 group by title
 limit 10;
 
+//normalising the dataset
 delete from recommender as r1 where exists (select movieId from recommender as r2 group by movieId having r1.movieId = r2.movieId and count(movieId)<30);
 delete from recommender as r1 where exists (select userId from recommender as r2 group by userId having r1.userId = r2.userId and count(userId)<10);
